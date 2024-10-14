@@ -1,0 +1,10 @@
+# Ignore Xcode user data
+*.xcuserdata/
+*.xcuserdatad/
+
+# Ignore workspace settings
+*.xcworkspace/xcuserdata/
+*.xcworkspace/contents.xcworkspacedata
+
+# Ignore macOS system files
+.DS_Store
