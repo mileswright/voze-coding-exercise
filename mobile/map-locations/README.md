@@ -50,5 +50,16 @@ Do not edit any lines above this line break.
 ---
 
 ## Getting Started
+1. Copy the repo
+2. Update the `githubUsername` to desired account
+3. Update the `projectName` to desired name (if necessary, will depend on name of fork)
+
 
 ## Implementation
+
+1. Project uses vanilla SwiftUI to load, display and allow interaction with the locations provided via the "API".
+2. Instructions indicated that `MapView.swift` should be the main view, I made the decision to split this out so that loading and filtering could be separate considerations from the display of the map.
+3. Chip style `FilterView.swift` has the filters hardcoded but could be done more elegantly either in house or with a 3rd party library.
+4. Map is fairly busy and could be styled to better draw the users attention to the desired locations, names could be displayed better/differently
+5. Could add a display to the annotation tap that shows additional details on the map directly and then allows navigation to the `LocationDetailView` rather than going directly there
+6. Map on `LocationDetailView` isn't positioned well for displaying the location when reusing the previous calculation, it works but isn't visually appealing
