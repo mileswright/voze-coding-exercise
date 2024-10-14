@@ -17,6 +17,10 @@
 		0293ECE32CBD664C00BAE88C /* GithubLocationServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECE22CBD664C00BAE88C /* GithubLocationServiceProvider.swift */; };
 		0293ECE52CBD668500BAE88C /* LocationServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECE42CBD668500BAE88C /* LocationServiceError.swift */; };
 		0293ECE72CBD66F400BAE88C /* AttributeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECE62CBD66F400BAE88C /* AttributeKeys.swift */; };
+		0293ECE92CBD6BA000BAE88C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECE82CBD6BA000BAE88C /* MapView.swift */; };
+		0293ECEC2CBD6D1400BAE88C /* MapCameraPosition+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECEB2CBD6D1400BAE88C /* MapCameraPosition+.swift */; };
+		0293ECEE2CBD6D2E00BAE88C /* MKCoordinate+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECED2CBD6D2E00BAE88C /* MKCoordinate+.swift */; };
+		0293ECF02CBD6D4800BAE88C /* CLLocationCoordinate2D+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECEF2CBD6D4800BAE88C /* CLLocationCoordinate2D+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		0293ECE22CBD664C00BAE88C /* GithubLocationServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubLocationServiceProvider.swift; sourceTree = "<group>"; };
 		0293ECE42CBD668500BAE88C /* LocationServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceError.swift; sourceTree = "<group>"; };
 		0293ECE62CBD66F400BAE88C /* AttributeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeKeys.swift; sourceTree = "<group>"; };
+		0293ECE82CBD6BA000BAE88C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		0293ECEB2CBD6D1400BAE88C /* MapCameraPosition+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapCameraPosition+.swift"; sourceTree = "<group>"; };
+		0293ECED2CBD6D2E00BAE88C /* MKCoordinate+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinate+.swift"; sourceTree = "<group>"; };
+		0293ECEF2CBD6D4800BAE88C /* CLLocationCoordinate2D+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -76,6 +84,7 @@
 				0293ECD12CBD642900BAE88C /* Views */,
 				0293ECD92CBD64EB00BAE88C /* Models */,
 				0293ECD62CBD64AE00BAE88C /* Services */,
+				0293ECEA2CBD6D0500BAE88C /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -84,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0293ECC42CBD63EA00BAE88C /* ContentView.swift */,
+				0293ECE82CBD6BA000BAE88C /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +142,16 @@
 				0293ECE22CBD664C00BAE88C /* GithubLocationServiceProvider.swift */,
 			);
 			path = "Location Service Providers";
+			sourceTree = "<group>";
+		};
+		0293ECEA2CBD6D0500BAE88C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0293ECEB2CBD6D1400BAE88C /* MapCameraPosition+.swift */,
+				0293ECED2CBD6D2E00BAE88C /* MKCoordinate+.swift */,
+				0293ECEF2CBD6D4800BAE88C /* CLLocationCoordinate2D+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +235,11 @@
 				0293ECDD2CBD653100BAE88C /* AttributeType.swift in Sources */,
 				0293ECE32CBD664C00BAE88C /* GithubLocationServiceProvider.swift in Sources */,
 				0293ECDB2CBD64FA00BAE88C /* Location.swift in Sources */,
+				0293ECEC2CBD6D1400BAE88C /* MapCameraPosition+.swift in Sources */,
 				0293ECDF2CBD654B00BAE88C /* LocationType.swift in Sources */,
+				0293ECF02CBD6D4800BAE88C /* CLLocationCoordinate2D+.swift in Sources */,
+				0293ECE92CBD6BA000BAE88C /* MapView.swift in Sources */,
+				0293ECEE2CBD6D2E00BAE88C /* MKCoordinate+.swift in Sources */,
 				0293ECE72CBD66F400BAE88C /* AttributeKeys.swift in Sources */,
 				0293ECC32CBD63EA00BAE88C /* App.swift in Sources */,
 			);

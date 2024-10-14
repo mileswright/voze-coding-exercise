@@ -1,4 +1,5 @@
 import Foundation
+import MapKit
 
 struct Location: Identifiable {
     let id: Int
@@ -11,6 +12,12 @@ struct Location: Identifiable {
         self.latitude = latitude
         self.longitude = longitude
         self.attributes = attributes
+    }
+}
+
+extension Location {
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
 
@@ -79,5 +86,49 @@ extension Location: Codable {
                 throw EncodingError.invalidValue(attribute, EncodingError.Context(codingPath: encoder.codingPath, debugDescription: "Invalid attribute type"))
             }
         }
+    }
+}
+
+extension Location {
+    static var location1: Location {
+        Location(
+            id: 1,
+            latitude: 37.7750,
+            longitude: -122.4195,
+            attributes: [
+                LocationTypeAttribute(value: .restaurant),
+                NameAttribute(value: "Golden Gate Grill"),
+                DescriptionAttribute(value: "A popular spot for local cuisine."),
+                EstimatedRevenueAttribute(value: 3.5)
+            ]
+        )
+    }
+
+    static var location2: Location {
+        Location(
+            id: 2,
+            latitude: 37.7745,
+            longitude: -122.4189,
+            attributes: [
+                LocationTypeAttribute(value: .museum),
+                NameAttribute(value: "San Francisco Museum of Modern Art"),
+                DescriptionAttribute(value: "Contemporary art exhibits."),
+                EstimatedRevenueAttribute(value: 5.0)
+            ]
+        )
+    }
+
+    static var location3: Location {
+        Location(
+            id: 3,
+            latitude: 37.7752,
+            longitude: -122.4198,
+            attributes: [
+                LocationTypeAttribute(value: .park),
+                NameAttribute(value: "Yerba Buena Gardens"),
+                DescriptionAttribute(value: "Urban park with sculptures and waterfalls."),
+                EstimatedRevenueAttribute(value: 8.0)
+            ]
+        )
     }
 }

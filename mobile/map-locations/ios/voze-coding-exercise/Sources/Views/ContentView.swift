@@ -59,5 +59,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(model: .init(locationService: GithubLocationServiceProvider(githubUsername: "Voze-HQ")))
+    ContentView(model: .init(locationService: GithubLocationServiceProvider(githubUsername: "mileswright")))
 }
