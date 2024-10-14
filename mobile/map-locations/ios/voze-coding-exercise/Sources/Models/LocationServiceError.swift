@@ -1,4 +1,4 @@
-enum NetworkError: Error {
+enum LocationServiceError: Error {
     case invalidResource
     case invalidURL
     case wrapped(Error)

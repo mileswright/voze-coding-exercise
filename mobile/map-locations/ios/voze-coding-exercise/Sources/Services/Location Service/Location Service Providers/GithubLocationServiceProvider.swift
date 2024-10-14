@@ -8,7 +8,7 @@ struct GithubLocationServiceProvider: LocationService {
     private var url: URL? { URL(string: urlString) }
 
     func getLocations() async throws -> [Location] {
-            guard let url else { throw NetworkError.invalidURL }
+            guard let url else { throw LocationServiceError.invalidURL }
             let (data, _) = try await URLSession.shared.data(from: url)
             let locations = try JSONDecoder().decode([Location].self, from: data)
             return locations
