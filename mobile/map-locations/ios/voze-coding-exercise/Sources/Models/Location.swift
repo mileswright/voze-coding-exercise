@@ -1,5 +1,6 @@
 import Foundation
 import MapKit
+import SwiftUI
 
 struct Location: Identifiable {
     let id: Int
@@ -18,6 +19,47 @@ struct Location: Identifiable {
 extension Location {
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+
+    var color: Color {
+        locationType.color
+    }
+
+    var icon: Image {
+        locationType.icon
+    }
+}
+
+extension Location {
+    subscript<T: AttributeType>(key: T.Type) -> T.AssociatedType? {
+        get { attributes.firstOfTypeOrNil(as: key)?.value }
+        set {
+            if let idx = attributes.firstIndex(where: { $0 is T }) {
+                if let newValue {
+                    attributes[idx] = T.init(value: newValue)
+                } else {
+                    attributes.remove(at: idx)
+                }
+            } else if let newValue {
+                attributes.append(T.init(value: newValue))
+            }
+        }
+    }
+
+    var name: String? {
+        attributes.firstOfTypeOrNil(as: NameAttribute.self)?.value
+    }
+
+    var description: String? {
+        attributes.firstOfTypeOrNil(as: DescriptionAttribute.self)?.value
+    }
+
+    var estimatedRevenueMillions: Decimal? {
+        attributes.firstOfTypeOrNil(as: EstimatedRevenueAttribute.self)?.value
+    }
+
+    var locationType: LocationType {
+        attributes.firstOfTypeOrNil(as: LocationTypeAttribute.self)?.value ?? .none
     }
 }
 

@@ -1,32 +1,3 @@
-# Take-Home Coding Exercise
-
-Welcome to the coding exercise! The goal of this project is to demonstrate your skills by building an app that displays a set of locations on a map in a performant manner. Please follow the instructions below to complete the exercise.
-
-## Project Overview
-
-This exercise involves fetching data from a JSON file stored in this repository and implementing a map view to display locations. You'll need to implement features like filtering locations by type and displaying additional information when a location is tapped.
-
-## Instructions
-
-1. **Fork the Repository:**
-    - Please begin by forking this repository.
-    - All of your changes should be committed to your fork.
-    - Optional: Use pull requests with short descriptions to help explain as you go through
-
-2. **Setup Project:**
-    - Create an `android` or `ios` folder respectively in the root of this folder. This is where your project will live.
-
-3. **Fetch Location Data:**
-    - The repository contains a JSON file, `locations.json`, that lists various locations.
-    - Use the raw file content feature of GitHub for fetching data (think of it as a mock API). Please point it to your forked repository, not the Voze repository.
-        - `https://raw.githubusercontent.com/<GITHUB_ACCOUNT_NAME>/coding-exercises/master/mobile/map-locations/locations.json`
-    - Your task is to parse this file and use the data within the app.
-
-4. **Display Locations on a Map View:**
-    - Create a map view in the app as the main view.
-        - The data is centered around San Francisco. Please set the default location to there.
-    - Plot the locations from the JSON file on the map using pins or markers.
-
 5. **Filtering Locations:**
     - Implement a way to filter the displayed locations by `location_type`.
         - The assumption can be made the location_types are a static set and will not change.
@@ -80,10 +51,4 @@ Do not edit any lines above this line break.
 
 ## Getting Started
 
-Fill out with necessary information and remove this line.
-
-
-
 ## Implementation
-
-Fill out with necessary information and remove this line.

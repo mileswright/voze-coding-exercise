@@ -15,11 +15,15 @@ struct MapView: View {
         VStack {
             Map(position: $cameraPosition) {
                 ForEach(locations) { location in
-                    Marker.init("\(location.id)", coordinate: location.coordinate)
+                    Annotation(location.name ?? "", coordinate: location.coordinate) {
+                        location.icon
+                            .foregroundStyle(location.color)
+                    }
                 }
             }
         }
     }
+
 
     private func mapCameraPositionForLocations(_ locations: [Location]) -> MapCameraPosition {
         MapCameraPosition.region(regionThatContainsAllLocations(locations))

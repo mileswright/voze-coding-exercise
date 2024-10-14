@@ -11,13 +11,13 @@ class ContentViewModel: ObservableObject {
 
     private var locationService: LocationService
     var state: State = .loading
-    var locations: [Location] = []
+    var locations: [Location] = [] 
 
     init(locationService: LocationService) {
         self.locationService = locationService
     }
 
-    func loadData() {
+    func fetchLocations() {
         self.state = .loading
 
         Task {
@@ -32,6 +32,15 @@ class ContentViewModel: ObservableObject {
             }
         }
     }
+
+    func loadingViewDidAppear() {
+        fetchLocations()
+    }
+
+    func retryButtonTapped() {
+        fetchLocations()
+    }
+
 }
 
 @MainActor
@@ -43,18 +52,36 @@ struct ContentView: View {
         Group {
             switch model.state {
             case .loading:
-                Text("Loading...")
+                loadingView()
             case .loaded:
-                List(model.locations) { location in
-                    Text("\(location.id)")
-                }
+                MapView(locations: $model.locations)
             case let .error(error):
-                Text("Error: \(error)")
+                errorView(error)
             }
         }
-        .onAppear {
-            model.loadData()
+    }
+
+    @ViewBuilder
+    private func loadingView() -> some View {
+        HStack {
+            ProgressView()
+                .progressViewStyle(.circular)
+            Text("Loading...")
         }
+        .onAppear {
+            model.loadingViewDidAppear()
+        }
+    }
+
+    @ViewBuilder
+    private func errorView(_ error: Error) -> some View {
+        VStack(spacing:  16 ) {
+            Text("Error: \(error.localizedDescription)")
+            Button("Retry") {
+                model.retryButtonTapped()
+            }
+        }
+        .padding()
     }
 }
 
