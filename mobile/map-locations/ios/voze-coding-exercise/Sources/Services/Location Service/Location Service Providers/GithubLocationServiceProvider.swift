@@ -2,8 +2,11 @@ import Foundation
 
 struct GithubLocationServiceProvider: LocationService {
     var githubUsername: String
+    var projectName: String
+
     private var urlString: String {
-        "https://raw.githubusercontent.com/\(githubUsername)/voze-coding-exercise/master/mobile/map-locations/locations.json"
+        // Thiw
+        "https://raw.githubusercontent.com/\(githubUsername)/\(projectName)/master/mobile/map-locations/locations.json"
     }
     private var url: URL? { URL(string: urlString) }
 

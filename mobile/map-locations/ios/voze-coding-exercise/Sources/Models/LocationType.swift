@@ -11,6 +11,10 @@ enum LocationType: String, CaseIterable, Codable {
 }
 
 extension LocationType {
+    var asLocationTypeFilter: LocationTypeFilter {
+        LocationTypeFilter(active: true, locationType: self)
+    }
+
     var title: String {
         switch self {
         case .bar:
