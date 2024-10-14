@@ -15,9 +15,11 @@ struct MapView: View {
         VStack {
             Map(position: $cameraPosition) {
                 ForEach(locations) { location in
-                    Annotation(location.name ?? "", coordinate: location.coordinate) {
-                        location.icon
-                            .foregroundStyle(location.color)
+                    Annotation(location.name, coordinate: location.coordinate) {
+                        NavigationLink(destination: LocationDetailView(location: location)) {
+                            location.icon
+                                .foregroundStyle(location.color)
+                        }
                     }
                 }
             }

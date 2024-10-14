@@ -46,8 +46,8 @@ extension Location {
         }
     }
 
-    var name: String? {
-        attributes.firstOfTypeOrNil(as: NameAttribute.self)?.value
+    var name: String {
+        attributes.firstOfTypeOrNil(as: NameAttribute.self)?.value ?? "\(latitude), \(longitude)"
     }
 
     var description: String? {

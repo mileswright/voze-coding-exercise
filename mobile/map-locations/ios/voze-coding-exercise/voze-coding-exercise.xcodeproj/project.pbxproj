@@ -24,6 +24,7 @@
 		0293ECF22CBD6E5100BAE88C /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECF12CBD6E5100BAE88C /* Collection+.swift */; };
 		0293ECF42CBD71A700BAE88C /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECF32CBD71A700BAE88C /* FilterView.swift */; };
 		0293ECF62CBD71D900BAE88C /* LocationTypeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECF52CBD71D900BAE88C /* LocationTypeFilter.swift */; };
+		0293ECF82CBD745400BAE88C /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293ECF72CBD745400BAE88C /* LocationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		0293ECF12CBD6E5100BAE88C /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		0293ECF32CBD71A700BAE88C /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		0293ECF52CBD71D900BAE88C /* LocationTypeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTypeFilter.swift; sourceTree = "<group>"; };
+		0293ECF72CBD745400BAE88C /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -101,6 +103,7 @@
 				0293ECC42CBD63EA00BAE88C /* ContentView.swift */,
 				0293ECE82CBD6BA000BAE88C /* MapView.swift */,
 				0293ECF32CBD71A700BAE88C /* FilterView.swift */,
+				0293ECF72CBD745400BAE88C /* LocationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0293ECF82CBD745400BAE88C /* LocationDetailView.swift in Sources */,
 				0293ECC52CBD63EA00BAE88C /* ContentView.swift in Sources */,
 				0293ECE52CBD668500BAE88C /* LocationServiceError.swift in Sources */,
 				0293ECD82CBD64D700BAE88C /* LocationService.swift in Sources */,
